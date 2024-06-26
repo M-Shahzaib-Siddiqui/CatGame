@@ -1,4 +1,0 @@
-repository "CatGame@FupaLabs@cloud"
-  path "/"
-    br "/main"
-    co "/main"

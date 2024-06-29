@@ -396,6 +396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movSpeed: 10
+  cam: {fileID: 519420031}
 --- !u!212 &1068159799
 SpriteRenderer:
   m_ObjectHideFlags: 0

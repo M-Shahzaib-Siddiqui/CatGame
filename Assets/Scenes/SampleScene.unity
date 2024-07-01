@@ -273,7 +273,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
+  m_BackGroundColor: {r: 0.4339623, g: 0.4339623, b: 0.4339623, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -374,11 +374,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1068159800}
   - component: {fileID: 1068159799}
-  - component: {fileID: 1068159798}
   - component: {fileID: 1068159801}
+  - component: {fileID: 1068159804}
+  - component: {fileID: 1068159798}
   - component: {fileID: 1068159802}
   - component: {fileID: 1068159803}
-  - component: {fileID: 1068159804}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -511,8 +511,9 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7255444955696437285, guid: 1ddb7782fbf0de84abbf67bf2c3f571d, type: 3}
   bulletForce: 20
   fireRate: 0.1
-  nextShot: 0.1
-  bulletDamage: 100
+  numOfBullets: 1
+  spread: 0
+  bulletDamage: 50
 --- !u!114 &1068159803
 MonoBehaviour:
   m_ObjectHideFlags: 0

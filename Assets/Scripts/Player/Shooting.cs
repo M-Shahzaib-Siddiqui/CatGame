@@ -7,12 +7,12 @@ public class Shooting : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
     public float bulletForce, fireRate, numOfBullets, spread, bulletDamage;
-    private float nextShot, spreadIncrement, startAngle, bulletAngle;
-
+    private float nextShot, spreadIncrement, startAngle;
+    Vector3 rot;
 
     void Start()
     {
-        nextShot = fireRate;
+        nextShot = 0;
         spreadIncrement = spread/(numOfBullets-1);
         startAngle = spread/2 * -1;
     }
@@ -28,9 +28,10 @@ public class Shooting : MonoBehaviour
 
     void Shoot() {
         for (int x=0; x<(numOfBullets); x++) {
-            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, (firePoint.rotation));
-            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+            rot = firePoint.rotation.eulerAngles;
+            rot = new Vector3(rot.x, rot.y, rot.z+startAngle+(spreadIncrement*x)+90f);
+            Instantiate(bulletPrefab).GetComponent<Bullet>().SpawnBullet(firePoint.position, Quaternion.Euler(rot));
         }
+        Debug.Log(firePoint.rotation);
     }
 }

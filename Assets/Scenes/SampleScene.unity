@@ -510,10 +510,10 @@ MonoBehaviour:
   firePoint: {fileID: 1845156183}
   bulletPrefab: {fileID: 7255444955696437285, guid: 1ddb7782fbf0de84abbf67bf2c3f571d, type: 3}
   bulletForce: 20
-  fireRate: 0.1
-  numOfBullets: 1
-  spread: 0
-  bulletDamage: 50
+  fireRate: 1
+  numOfBullets: 5
+  spread: 180
+  bulletDamage: 200
 --- !u!114 &1068159803
 MonoBehaviour:
   m_ObjectHideFlags: 0

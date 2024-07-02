@@ -6,9 +6,10 @@ public class Shooting : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
-    public float bulletForce, fireRate, numOfBullets, spread, bulletDamage;
+    public float bulletForce, fireRate, numOfBullets, spread, bulletDamage, bulletHealth, bulletTime;
     private float nextShot, spreadIncrement, startAngle;
     Vector3 rot;
+
 
     void Start()
     {
@@ -27,11 +28,17 @@ public class Shooting : MonoBehaviour
     }
 
     void Shoot() {
+        if (numOfBullets==1) {
+            rot = firePoint.rotation.eulerAngles;
+            rot = new Vector3(rot.x, rot.y, rot.z+90f);
+            Instantiate(bulletPrefab).GetComponent<Bullet>().SpawnBullet(firePoint.position, Quaternion.Euler(rot), bulletForce);
+            return;
+        }
+
         for (int x=0; x<(numOfBullets); x++) {
             rot = firePoint.rotation.eulerAngles;
             rot = new Vector3(rot.x, rot.y, rot.z+startAngle+(spreadIncrement*x)+90f);
-            Instantiate(bulletPrefab).GetComponent<Bullet>().SpawnBullet(firePoint.position, Quaternion.Euler(rot));
+            Instantiate(bulletPrefab).GetComponent<Bullet>().SpawnBullet(firePoint.position, Quaternion.Euler(rot), bulletForce);
         }
-        Debug.Log(firePoint.rotation);
     }
 }

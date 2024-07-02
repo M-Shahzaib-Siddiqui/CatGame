@@ -8,8 +8,8 @@ public class EnemyDamage : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.GetComponent<Bullet>() != null) {
-            GameObject player = GameObject.Find("Player");
-            health -= player.GetComponent<Shooting>().bulletDamage;
+            float gunDamage = FindObjectOfType<Shooting>().bulletDamage;
+            health -= gunDamage;
         }
         if (health<=0) {Destroy(gameObject);}
     }

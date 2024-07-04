@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 3065471148783491079}
-  bulletPrefab: {fileID: 7255444955696437285, guid: 1ddb7782fbf0de84abbf67bf2c3f571d, type: 3}
-  bulletForce: 100
+  bulletPrefab: {fileID: 4781506855136387295, guid: ab73d127382f12d458e9a3e8adde3d71, type: 3}
+  bulletForce: 80
   fireRate: 1
   numOfBullets: 1
   spread: 0

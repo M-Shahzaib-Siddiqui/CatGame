@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public float health, timeBeforeHeal;
     private float maxHealth, lastHit;
-    public Image healthBar;
+    public Image healthBar, healthBarEdge;
 
     void Start() {
         maxHealth = health;
@@ -17,6 +17,8 @@ public class PlayerHealth : MonoBehaviour
         if (Time.time>lastHit+timeBeforeHeal && health<maxHealth) {
             HealthUpdate(1);
         }
+        if (health==maxHealth) {healthBarEdge.color = new Color(healthBar.color.r, healthBar.color.b, healthBar.color.g, 255f);}
+        else {healthBarEdge.color = healthBarEdge.color = new Color(healthBar.color.r, healthBar.color.b, healthBar.color.g, 0f);}
     }
 
     void OnCollisionEnter2D(Collision2D collision) {

@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 8403982090183924494}
   - component: {fileID: 5220499138025851015}
   - component: {fileID: 8293721941315681647}
-  - component: {fileID: 4491374836770091363}
   - component: {fileID: 1742221680027306892}
+  - component: {fileID: 3395802306355655516}
   m_Layer: 0
   m_Name: LaserBullet
   m_TagString: Untagged
@@ -114,8 +114,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &4491374836770091363
-CircleCollider2D:
+--- !u!114 &1742221680027306892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4781506855136387295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81db9854c4c4245458c7dc0ca9c2fe08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!70 &3395802306355655516
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -146,18 +158,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.000000029802322, y: 0.00000047683716}
-  serializedVersion: 2
-  m_Radius: 0.50000006
---- !u!114 &1742221680027306892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4781506855136387295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81db9854c4c4245458c7dc0ca9c2fe08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1, y: 2}
+  m_Direction: 0
